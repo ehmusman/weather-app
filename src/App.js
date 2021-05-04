@@ -8,7 +8,7 @@ function App() {
   const [weatherError, setWeatherError] = useState(null)
 
   const handleCityName = (name) => {
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=b9721047fe209e96c36dcec04a42d9e5&units=metric`)
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${process.env.WEATHER_API_KEY}&units=metric`)
       .then(res => setWeatherData(res.data))
       .catch(err => setWeatherError(err.message))
     setTimeout(() => {

@@ -15,5 +15,5 @@ const UserMap = (props) => {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ("AIzaSyCxeTdXKaSJ48fIS9Dfs-lDKOKRPcIPQUs")
+  apiKey: process.env.GOOGLE_MAP_API
 })(UserMap)
