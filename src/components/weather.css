@@ -1,0 +1,17 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.weather-main {
+  height: 100vh;
+  background: url("./weather.jpeg") center center/cover no-repeat;
+  position: relative;
+}
+.weather-sub {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}

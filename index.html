@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    let arr = [2, 5 , -4, 11, 3, 5, 0, 10,-4]
+    let reqArr = [] // this is our required Arr
+    let newArr = [] // 
+    let sumArr = []
+    let indexArr = []
+    let sum = 8
+    for(let i=0; i<arr.length; i++){
+        for(let j=i+1; j<arr.length; j++){
+            for(let k= j+1; k<arr.length;k++){
+                for(let l= k+1; l<arr.length;l++){
+                newArr.push([arr[i],arr[j], arr[k], arr[l]])
+            }
+            }
+        }
+    }
+    for(let i=0; i<newArr.length; i++){
+        sumArr[i]= newArr[i].reduce((a,b) => a+b,0)
+    }
+
+    let finalArr = sumArr.filter((x, index) => {
+        if(x===sum){
+            indexArr.push(index)
+        }
+        return x===sum
+    })
+
+    for(let i=0; i<indexArr.length; i++){
+        reqArr.push(newArr[indexArr[i]])
+    }
+// console.log(newArr)
+    console.log(arr)
+    console.log("Array of elements whose sum = "+sum+ " ")
+    console.log(reqArr)
+
+    </script>
+</body>
+</html>
